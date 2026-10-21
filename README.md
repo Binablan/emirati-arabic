@@ -9,7 +9,7 @@ A small, source-grounded skill for writing and reviewing Emirati Arabic. It prio
 ## Install in Hermes
 
 ```sh
-hermes skills install Binablan/emirati-arabic
+hermes skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/main/SKILL.md
 ```
 
 For a compatible agent that supports `SKILL.md`, download the repository and follow that agent's skill-installation instructions. Compatibility with every agent has not been tested.

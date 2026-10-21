@@ -5,8 +5,12 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+WINDOWS_PATH_PATTERN = r'\b[A-Za-z]:[\\/]'
 
 class SkillPackageTests(unittest.TestCase):
+    def test_windows_path_detector_distinguishes_web_urls(self):
+        self.assertIsNone(re.search(WINDOWS_PATH_PATTERN, 'https://example.invalid/skill'))
+        self.assertIsNotNone(re.search(WINDOWS_PATH_PATTERN, 'Z' + ':/' + 'Users/example/file'))
     def test_frontmatter(self):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         match = re.match(r'\A---\n(.*?)\n---(?:\n|\Z)', text, re.DOTALL)
@@ -37,7 +41,7 @@ class SkillPackageTests(unittest.TestCase):
     def test_no_private_material_in_publishable_files(self):
         # Character classes keep literal detectors from matching their own source.
         # Detect home paths rather than embedding a particular machine username.
-        forbidden = [r'[A-Za-z]:[\\/]', r'(?i)\blocal[-][a-f0-9]{5,}\b',
+        forbidden = [WINDOWS_PATH_PATTERN, r'(?i)\blocal[-][a-f0-9]{5,}\b',
                      r'(?i)/(?:home|users)/[^/\s]+', r'(?i)tail[a-z0-9]+\.ts\.net',
                      r'(?i)conduit[:]//', r'(?i)gh[pousr]_[A-Za-z0-9]{12,}',
                      r'(?i)HERMES[_]HOME', '[ا]لعينة القديمة', '[ا]لعيّنة القديمة']
