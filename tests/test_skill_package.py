@@ -28,7 +28,10 @@ class SkillPackageTests(unittest.TestCase):
     def test_linked_skill_references_exist(self):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         refs = set(re.findall(r'`(references/[^`]+\.md)`', text))
-        self.assertEqual(refs, {'references/sources.md', 'references/examples.md'})
+        self.assertEqual(refs, {'references/sources.md', 'references/examples.md',
+                                'references/abu-dhabi.md', 'references/abu-dhabi-sources.md',
+                                'references/abu-dhabi-examples.md', 'references/evaluation.md',
+                                'references/owner-examples.md'})
         for ref in refs:
             self.assertTrue((ROOT / ref).is_file(), ref)
 
