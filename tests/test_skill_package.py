@@ -31,7 +31,9 @@ class SkillPackageTests(unittest.TestCase):
         self.assertEqual(refs, {'references/sources.md', 'references/examples.md',
                                 'references/abu-dhabi.md', 'references/abu-dhabi-sources.md',
                                 'references/abu-dhabi-examples.md', 'references/evaluation.md',
-                                'references/owner-examples.md'})
+                                'references/owner-examples.md',
+                                'references/conversation-behavior.md',
+                                'references/conversation-evaluation.md'})
         for ref in refs:
             self.assertTrue((ROOT / ref).is_file(), ref)
 

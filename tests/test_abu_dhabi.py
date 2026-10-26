@@ -27,7 +27,7 @@ def load_checker():
 class AbuDhabiPackageTests(unittest.TestCase):
     def test_version_and_opt_in_profile(self):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('version: 0.2.0', text)
+        self.assertIn('version: 0.2.1-rc.1', text.splitlines())
         self.assertIn('abu-dhabi', text)
         self.assertIn('general-emirati', text)
         self.assertIn('opt-in', text)
