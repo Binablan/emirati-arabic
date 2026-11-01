@@ -1,10 +1,39 @@
 # Emirati Arabic Skill | مهارة اللهجة الإماراتية
 
-**By Binablan · v0.2.0 source update · MIT (original project material)**
+**By Binablan · v0.2.1-rc.1 · Experimental release candidate · MIT (original project material)**
 
-مهارة أولية تساعد المساعدات الذكية على كتابة ومراجعة العربية الإماراتية، مع قواعد محدودة موثّقة وأمثلة قابلة للمراجعة. ليست معجمًا شاملًا، ولا بديلًا عن مراجعة متحدثي اللهجة.
+مهارة للمحادثة وفهم المقصود وكتابة النصوص ومراجعتها بالإماراتية، مع تخصص أبوظبي عند اختياره. تنجز الطلب بدل شرح تعبيرات المستخدم تلقائيًا؛ المعجم مرجع مساعد فقط. قواعدها محدودة وأمثلتها قابلة للمراجعة، وليست بديلًا عن مراجعة متحدثي اللهجة.
 
-A small, source-grounded skill for writing and reviewing Emirati Arabic. It prioritizes preserving meaning, avoiding mechanical letter substitutions, and distinguishing source evidence from original examples.
+A small, source-grounded skill for conversation, contextual intent, writing, and revision in Emirati Arabic. It prioritizes task completion and meaning preservation, avoids mechanical word substitutions, and separates source evidence from original examples.
+
+## ابدأ الاستخدام مع مساعدك
+
+[دليل التفعيل حسب التطبيق](USAGE.md): مهارة `SKILL.md` للتطبيقات الداعمة، أو ملف محادثة مجمّع للإرفاق أو اللصق. لا تحتاج المحادثة أدوات Hermes أو ذاكرة خاصة؛ يحتاج التطبيق إلى إيصال التعليمات فعلًا للنموذج. الإماراتية العامة بعد التفعيل، وأبوظبي عند الطلب. قابلية نقل التعليمات ليست ضمانًا لتوافق كل نموذج أو تطبيق.
+
+ملف المحادثة يُولَّد من المصدر نفسه عبر `scripts/build_chat_bundle.py`؛ ليس مهارة بديلة أو نصًا مستقلاً نطوّره بالتوازي. طريقة توليده وحدود الحجم والتحقق موضحة في الدليل. لا تتضمن هذه الإضافة نتيجة اختبار محادثة عابر للنماذج.
+
+## Experimental candidate | مرشح الإصدار التجريبي
+
+`0.2.1-rc.1` is a new prerelease version, separate from `0.2.0` on `main`. It carries the prior conversation-first behavior and all source/owner examples forward, with an additional clarity rule for actors, actions, and potentially ambiguous kinship/body-part references in spoken scripts. It does not ban regional spellings or include a private test answer as a template.
+
+This branch is for community review through a Pull Request. No merge, GitHub Release, registry publication, or native-speaker certification is implied. Dialect quality remains provisional and open to human review. See [release notes](RELEASE_NOTES.md) and [distribution policy](DISTRIBUTION.md).
+
+## Historical behavior review — intent-first-review-2
+
+`intent-first-review-2` adds general guidance for speakable collocations, clearly self-directed humor, practical drafts without unsupported personal feelings/motives/excuses, temporary language changes, and locally scoped user corrections. It does not install known test answers as templates.
+
+Historical r2 checks: 49 offline tests. The new ordinary-discovery comparison collected 44 actual replies: 12 new standalone cases, one six-turn resumed dialogue, and four known-input regressions in each of two conditions. Both conditions received identical user turns; the candidate used no `-s`, forced skill-reading request, or technical activation turn. Actual tool records showed the revised skill and Abu Dhabi guide loaded in all 17 candidate sessions; the baseline lacked the target skill. A separate post-hoc ambiguity probe collected two more replies and is not folded into the frozen comparison. The full unchanged outputs, assessments, limitations, and all attempts belong in the local evidence bundle, not the installed skill. These observations are not native-speaker certification or causal proof of improvement.
+
+### Previous review — retained historical record
+
+`intent-first-review-1` modifies the instructions in `SKILL.md` itself: answer ordinary conversation, write requested text, rewrite when asked, and explain meaning only when requested or necessary. It preserves general Emirati as the default, the opt-in Abu Dhabi profile, existing source rules, and owner-authorized quotations.
+
+- [Behavior examples and boundaries](references/conversation-behavior.md)
+- [Isolated loading and real conversation evaluation](references/conversation-evaluation.md)
+
+The `main` URL below remains the previously published version, **not this candidate**. A working-tree edit is not proof that any running assistant loaded it. Use a separate test profile and verify the exact branch-copy hashes and actual `skill_view` results; do not replace another installed skill or change global settings implicitly.
+
+Local verification for the previous review: 43 offline tests passed (the prior baseline was 40). A real, limited A/B run collected 34 replies: 14 cases / 17 user turns per condition, including a four-turn resumed conversation. Both conditions used `gpt-6-astra` via `openai-codex`, requested medium reasoning, and disabled persistent memory; temperature and seed were not explicitly set. The comparison condition had no Emirati skill; the treatment's persisted launch policy contained the exact modified `SKILL.md` text on every evaluated turn. An additional activation session returned that file and two references via real `skill_view` calls. Full inputs, raw replies, loading evidence, and judgments are kept in the separate local review bundle, not installed as teaching examples. This is not an independent native-speaker assessment or a statistical claim of improvement.
 
 ## v0.2.0 — تخصص أبوظبي وتصحيحات صاحب المهارة
 
@@ -17,7 +46,7 @@ A small, source-grounded skill for writing and reviewing Emirati Arabic. It prio
 
 الموثّق في مصدر عن أبوظبي ليس بالضرورة حصرياً لها. شواهد Qafisheh تاريخية، وشواهد Habash et al. موسومة بأبوظبي في دراسة كتابة ونطق؛ لا يثبت أي منهما وحده طبيعية محادثة معاصرة عند كل المتحدثين. الأمثلة تطبيقات أصلية غير معتمدة محلياً.
 
-**GitHub source update, not a registry publication or GitHub Release.** The `main` installation URL below installs the repository state. The version number does not imply independent native-speaker certification.
+**Historical v0.2.0 GitHub source update, not a registry publication or GitHub Release.** The `main` installation URL below installs that branch, not this candidate. The version number does not imply independent native-speaker certification.
 
 ### أمثلة صاحب المهارة المأذون بنشرها
 
@@ -25,17 +54,39 @@ A small, source-grounded skill for writing and reviewing Emirati Arabic. It prio
 
 نُقلت أمثلة Binablan بنفس كتابته وبإذنه، مع فصلها عن المصادر القديمة. تمثل اختياراته في السياقات المحددة، لا كل أهل أبوظبي. لا تُوحّد «مش» و«مب» آلياً، ولا تُخلط جهة الإخبار في «بخبرك» و«خبرنيه»، ولا «باجر» مع «عقب باجر» أو «ورا باجر». بدائل السؤال عن الوصول تختلف بحسب الموقف، و«من الصبح نترياك» قد تحمل عتاباً خفيفاً بحسب النبرة. الاختبارات تسمح ببدائل مؤلفة تحفظ القيود المحددة؛ ليست فرضاً لجملة واحدة أو حكماً دلالياً شاملاً.
 
-## Install in Hermes
+## Install in Hermes | التثبيت
+
+Prerequisite: an installed Hermes version supporting direct `SKILL.md` URL installation. Review the source before installing. Test in a **new isolated profile** so an existing personal skill is not overwritten:
+
+```sh
+hermes profile create emirati-community-review --no-skills --no-alias
+hermes -p emirati-community-review skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/work/v0.2.0-abu-dhabi/SKILL.md
+hermes -p emirati-community-review skills list
+hermes -p emirati-community-review
+```
+
+The branch name predates the candidate version. Check the installed `SKILL.md` says `version: 0.2.1-rc.1` and `behavior_revision: intent-first-rc-1`. This is a mutable review-branch URL, not a final-release tag. For a fixed snapshot, replace the branch segment with the full commit SHA shown on the PR. Installation is subject to Hermes' normal safety scan; do not bypass a blocked verdict with `--force`. Choose another fresh profile name if this one exists.
+
+To deliberately install the older `main` source instead (not the candidate):
 
 ```sh
 hermes skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/main/SKILL.md
 ```
 
+The public source ZIP includes offline tests and build tooling for contributors; URL installation loads the skill and its linked runtime references, not private evaluation logs.
+
 For a compatible agent that supports `SKILL.md`, download the repository and follow that agent's skill-installation instructions. Compatibility with every agent has not been tested.
 
 ## Usage | الاستخدام
 
+الإماراتية العامة هي الافتراض. لاختيار أبوظبي في المحادثة الحالية، قل «خل سوالفنا بالظبياني». يبقى الاختيار إلى أن تغيّره؛ طلب رسالة إنجليزية مؤقتة لا يلغي اختيار المحادثة. لا يُفرض الاختيار على جلسات أخرى أو نصوص مقتبسة أو طلب بلغة مختلفة.
+
+For explicit verification in a fresh chat, ask the assistant to load `emirati-arabic` and read `references/abu-dhabi.md`; inspect the actual tool result and version, not only its claim of loading. A natural dialect request does not guarantee discovery in every model/session.
+
 Ask your assistant, for example:
+
+- «كلمني ظبياني؛ اليوم خلصت الشغل بدري.»
+- «اكتب لي رسالة قصيرة أعتذر فيها عن الموعد، بدون ما تخترع سبب.»
 
 - «استخدم مهارة emirati-arabic وراجع هالنص، بدون ما تغيّر معناه.»
 - «حوّل النص إلى كلام إماراتي بسيط، بدون مبالغة أو حشو أمثال.»
@@ -72,8 +123,12 @@ Corrections and additional well-supported examples are welcome. Explain the cont
 From the repository directory, with Python 3.10 or later:
 
 ```sh
-python -m unittest discover -s tests -v
+python -B -m unittest discover -s tests -v
+python -B scripts/verification_probes.py --project .
+python -B scripts/build_distribution.py --output-dir ../emirati-release-files
 ```
+
+The build uses an explicit file allowlist and emits a ZIP with a per-file SHA-256 manifest and `SHA256SUMS` outside the repository. Keep the original private review evidence separate; do not attach it to a public PR or release.
 
 These tests check structure, source metadata, publication hygiene, and the conversion checker with positive/negative authored cases. They do not prove linguistic fluency, full semantic equivalence, or universal naturalness. To check actual model outputs, use the separate workflow in [evaluation.md](references/evaluation.md); do not present reference-fixture self-tests as model evaluation.
 

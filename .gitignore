@@ -8,3 +8,16 @@ __pycache__/
 *.jpeg
 *.zip
 .DS_Store
+*.log
+*.jsonl
+*.db
+*.db-*
+*.sqlite*
+.cache/
+.pytest_cache/
+dist/
+evidence/
+private/
+sessions/
+generation/
+.venv/

@@ -1,5 +1,47 @@
 # Changelog
 
+## Unreleased — activation and portability preparation
+
+- Add an explicit host-independent activation contract to the existing skill: Emirati conversation after user activation, opt-in Abu Dhabi, requested language/quotation preservation, no dependency on private memory or a tool API, and no fabricated reference access or automatic correction storage.
+- Add an Arabic usage guide covering skill-folder hosts, file attachments, and pasted instructions, with context-size, retrieval, persistence, and model-quality limits.
+- Generate a single-file chat edition directly from an explicit runtime subset of the validated source package, with source/output hashes and preserved rights. Do not feed developer fixtures or private evaluation records to the conversation model.
+- Add offline activation and artifact checks. This preparation does not claim a new two-model dialogue evaluation, universal application compatibility, publication, or installation into another profile.
+
+## Unreleased — contextual safeguards review
+
+- Clarify that an explicit writing request can establish draft authorship; do not force a label or quotation when the user requests text only. Retain the ban on invented assistant experiences.
+- Replace the blanket restriction on implied sarcasm/apparent boasting with a contextual clarity check. Requested, legible irony remains possible without inventing a mishap.
+- Distinguish conventional greetings, requested thanks/apologies, and wishes from unsupported claims about private feelings, motives, excuses, events, or promises.
+- Keep historical sources, owner quotations, protected meaning, regional defaults, and release version unchanged. These are editorial scope refinements, not new attested dialect rules or owner quotations.
+- Add instruction-presence regressions, each observed failing before the relevant edit and passing afterward. No fresh isolated model comparison or native-speaker review is claimed for these changes; prior evaluation results do not validate them.
+
+## 0.2.1-rc.1 — experimental candidate, pending final approval
+
+- Carry forward both conversation-first reviews, all prior dialect rules, source evidence, owner-authorized quotations, and offline regression fixtures.
+- Add general spoken-script clarity guidance: name the actor/action/referent when an ambiguous pronoun or kinship/body-part spelling obscures the event; preserve the event rather than substituting a different mishap. No private test transcript is embedded as a model answer.
+- Add offline instruction-presence regression coverage; those checks do not prove model behavior or native dialect fluency.
+- Separate public distribution from private evidence using an explicit allowlist, deterministic ZIP, integrity manifest, and defensive packaging tests. Remove a personal reviewer nickname from the public evaluation protocol without changing its meaning.
+- Document isolated review-branch installation, opt-in Abu Dhabi usage, human-review limits, and the no-merge/no-final-release approval gate.
+- Historical review records below describe their original stage; their test totals are not the candidate test total. No live evaluation transcript, local log, private calibration, or internal evidence archive is distributed.
+
+## Unreleased local behavior review — intent-first-review-2
+
+- Prefer familiar, speakable constructions over forced dialect markers; make requested self-directed humor clear from the supplied situation.
+- Ground practical first-person drafts: a draft label is not permission to invent feelings, motives, knowledge, or excuses. Preserve warmth, conditional proposals, and expressly requested fiction without treating every social inference as an error.
+- Resume the prior dialogue dialect after a temporary English artifact and apply user corrections within their affected scope.
+- Retain version 0.2.0, prior uncommitted work, source evidence, owner quotations, and contextual travel-expression rules. No known-output answers are embedded in the skill.
+- Verified 49 offline tests after recorded RED/GREEN steps. Ordinary discovery, without preload or forced reads, produced 44 actual replies across two matched conditions, including a six-turn conversation per condition. A separate two-reply post-hoc probe addresses an ambiguous test opening without replacing its original result.
+- All earlier outputs remain unchanged. Evaluation artifacts stay outside the source package. No merge, push, publication, or claim of native dialect mastery.
+
+## Unreleased local behavior review — intent-first-review-1
+
+- Change the loaded `SKILL.md` contract and discovery description to cover conversation, contextual intent, answering, new writing, and rewriting; keep meaning explanation available when explicitly requested.
+- Make the lexicon supporting evidence rather than a mandatory first step or default answer. Preserve the general default, conversation-scoped opt-in Abu Dhabi choice, existing attested rules, owner quotations, and prior constraints.
+- Add provisional behavior examples and an isolated real-generation protocol; do not attribute generated suggestions to the owner or historical sources.
+- No merge, push, registry publication, GitHub Release, or automatic replacement of another installed skill is part of this review. File checks, model-output review, and native-speaker naturalness assessment remain separate.
+- Verified locally: initially 42 offline checks, then 43 after an independent review caught unsupported «اليوم» in two provisional examples. A new regression failed before removing those dates and passed afterward; the original reviewer rejection and all generated outputs were retained. The corrected reference was not read during the A/B generation; the exact loaded SKILL.md and regional guidance did not change.
+- Completed an actual isolated A/B run with 14 cases and 17 turns per condition (34 replies total). Checked real `skill_view` results and exact skill text in each treatment session's persisted launch policy; used one genuinely resumed four-turn conversation per condition. Kept authored test inputs/rubrics and unedited outputs outside the installed skill. A blinded assistant review rated the skill condition 13 pass / 1 needs review, versus 10 pass / 2 needs review / 2 fail without the Emirati skill. The uncertain case adds details to a creative story request; the permissible scope of invention is ambiguous. These are preliminary judgments, not dialect mastery, native-speaker certification, or statistically supported improvement.
+
 ## 0.2.0 — GitHub source update (no registry or GitHub Release)
 
 ### Owner-authorized examples on top of r3
