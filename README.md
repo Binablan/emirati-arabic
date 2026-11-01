@@ -6,6 +6,12 @@
 
 A small, source-grounded skill for conversation, contextual intent, writing, and revision in Emirati Arabic. It prioritizes task completion and meaning preservation, avoids mechanical word substitutions, and separates source evidence from original examples.
 
+## ابدأ الاستخدام مع مساعدك
+
+[دليل التفعيل حسب التطبيق](USAGE.md): مهارة `SKILL.md` للتطبيقات الداعمة، أو ملف محادثة مجمّع للإرفاق أو اللصق. لا تحتاج المحادثة أدوات Hermes أو ذاكرة خاصة؛ يحتاج التطبيق إلى إيصال التعليمات فعلًا للنموذج. الإماراتية العامة بعد التفعيل، وأبوظبي عند الطلب. قابلية نقل التعليمات ليست ضمانًا لتوافق كل نموذج أو تطبيق.
+
+ملف المحادثة يُولَّد من المصدر نفسه عبر `scripts/build_chat_bundle.py`؛ ليس مهارة بديلة أو نصًا مستقلاً نطوّره بالتوازي. طريقة توليده وحدود الحجم والتحقق موضحة في الدليل. لا تتضمن هذه الإضافة نتيجة اختبار محادثة عابر للنماذج.
+
 ## Experimental candidate | مرشح الإصدار التجريبي
 
 `0.2.1-rc.1` is a new prerelease version, separate from `0.2.0` on `main`. It carries the prior conversation-first behavior and all source/owner examples forward, with an additional clarity rule for actors, actions, and potentially ambiguous kinship/body-part references in spoken scripts. It does not ban regional spellings or include a private test answer as a template.

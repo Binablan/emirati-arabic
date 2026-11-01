@@ -20,6 +20,28 @@ class BehaviorContractTests(unittest.TestCase):
             with self.subTest(reference_fragment=fragment):
                 self.assertIn(fragment, reference)
 
+    def test_activation_is_explicit_and_does_not_require_host_tools(self):
+        text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
+        self.assertIn('## Activation and portability', text)
+        section = text.split('## Activation and portability', 1)[1].split('\n## ', 1)[0]
+        for fragment in ('use general Emirati for ordinary dialogue',
+                         'Downloading or attaching a file alone',
+                         'does not require a specific host, tool, private memory',
+                         'embedded in the current context',
+                         'Do not claim to have read an unavailable reference',
+                         'higher-priority host instructions',
+                         'Do not automatically save corrections'):
+            with self.subTest(fragment=fragment):
+                self.assertIn(fragment, section)
+
+    def test_draft_context_can_replace_an_extra_label(self):
+        self.assert_contract_guidance(
+            'Do not invent personal experience.',
+            ('the writing request itself can establish that framing',
+             'If the user asks for text only, return only the draft',
+             'Do not claim that you drove'),
+            ('طلب الكتابة نفسه يكفي', 'النص فقط', 'لا تنسب التجربة إلى المساعد'))
+
     def test_speakable_collocations_take_priority_over_dialect_display(self):
         self.assert_contract_guidance(
             'Compose, do not substitute.',
@@ -27,12 +49,33 @@ class BehaviorContractTests(unittest.TestCase):
              'forcing dialect markers'),
             ('تراكيب مألوفة قابلة للقول', 'صياغة واضحة مشتركة'))
 
+    def test_humor_allows_contextually_clear_irony(self):
+        self.assert_contract_guidance(
+            'Make self-directed humor legible.',
+            ('Contextually clear irony or playful boasting is allowed',
+             'Do not invent a mishap'),
+            ('السخرية الضمنية أو مدح النفس على سبيل المزاح مسموح',
+             'لا تخترع خطأ'))
+        text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
+        self.assertNotIn('Do not rely on implied sarcasm, apparent boasting', text)
+
     def test_self_directed_humor_has_an_explicit_grounded_target(self):
         self.assert_contract_guidance(
             'Make self-directed humor legible.',
             ("speaker's stated action or mishap", 'implied sarcasm', 'boasting',
              'Do not invent a mishap'),
             ('الفعل أو الموقف الذي ذكره المتكلم', 'سخرية ضمنية', 'مدح النفس'))
+
+    def test_conventional_courtesy_does_not_require_invented_backstory(self):
+        self.assert_contract_guidance(
+            'Ground practical drafts in supplied facts.',
+            ('A requested apology or thanks is a communicative act',
+             'Allow conventional greetings, thanks, apologies, and wishes',
+             'do not add unprovided events, intense emotions, motives, or promises',
+             'does not license invented personal facts'),
+            ('طلب الاعتذار أو الشكر يجيز أداء هالفعل في الرسالة',
+             'عبارات التحية والشكر والاعتذار والتمنّي المعتادة',
+             'لا تضف أحداثًا أو مشاعر شديدة أو دوافع أو وعودًا'))
 
     def test_practical_drafts_do_not_invent_private_states_for_politeness(self):
         self.assert_contract_guidance(

@@ -9,6 +9,7 @@
     "README.md",
     "SKILL.md",
     "THIRD_PARTY_NOTICES.md",
+    "USAGE.md",
     "distribution-files.json",
     "references/abu-dhabi-examples.md",
     "references/abu-dhabi-lexicon.json",
@@ -22,6 +23,7 @@
     "references/owner-examples.md",
     "references/sources.md",
     "scripts/build_distribution.py",
+    "scripts/build_chat_bundle.py",
     "scripts/check_conversions.py",
     "scripts/verification_probes.py",
     "tests/fixtures/abu_dhabi_cases.json",
@@ -30,6 +32,7 @@
     "tests/test_behavior_contract.py",
     "tests/test_distribution.py",
     "tests/test_owner_examples.py",
+    "tests/test_portability.py",
     "tests/test_review_regressions.py",
     "tests/test_skill_package.py"
   ]

@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased — activation and portability preparation
+
+- Add an explicit host-independent activation contract to the existing skill: Emirati conversation after user activation, opt-in Abu Dhabi, requested language/quotation preservation, no dependency on private memory or a tool API, and no fabricated reference access or automatic correction storage.
+- Add an Arabic usage guide covering skill-folder hosts, file attachments, and pasted instructions, with context-size, retrieval, persistence, and model-quality limits.
+- Generate a single-file chat edition directly from an explicit runtime subset of the validated source package, with source/output hashes and preserved rights. Do not feed developer fixtures or private evaluation records to the conversation model.
+- Add offline activation and artifact checks. This preparation does not claim a new two-model dialogue evaluation, universal application compatibility, publication, or installation into another profile.
+
+## Unreleased — contextual safeguards review
+
+- Clarify that an explicit writing request can establish draft authorship; do not force a label or quotation when the user requests text only. Retain the ban on invented assistant experiences.
+- Replace the blanket restriction on implied sarcasm/apparent boasting with a contextual clarity check. Requested, legible irony remains possible without inventing a mishap.
+- Distinguish conventional greetings, requested thanks/apologies, and wishes from unsupported claims about private feelings, motives, excuses, events, or promises.
+- Keep historical sources, owner quotations, protected meaning, regional defaults, and release version unchanged. These are editorial scope refinements, not new attested dialect rules or owner quotations.
+- Add instruction-presence regressions, each observed failing before the relevant edit and passing afterward. No fresh isolated model comparison or native-speaker review is claimed for these changes; prior evaluation results do not validate them.
+
 ## 0.2.1-rc.1 — experimental candidate, pending final approval
 
 - Carry forward both conversation-first reviews, all prior dialect rules, source evidence, owner-authorized quotations, and offline regression fixtures.
