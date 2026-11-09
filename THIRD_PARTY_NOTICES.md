@@ -1,5 +1,9 @@
 # Third-party reference notice
 
+Selected video-text references are identified with original URLs and evidence limits in `references/contextual-usage.md`: سوالف بحر swalefba7r, مركز أبوظبي للغة العربية AD Arabic Language Centre, and عرب كاست / بودكاست ذُخر. Only edited lexical summaries and short anchors are included, not videos, audio, bulk transcripts or a verified phonetic transcription. Rights remain with the respective rights holders and are not relicensed by this project. No publisher endorsement or independent verification of dictionary-origin claims is implied. Newly edited contextual owner meanings are distinct from the earlier publication-authorized quotation files; local inclusion does not itself authorize remote publication of correspondence, and no correspondence is reproduced.
+
+Selected heritage-context reference: **«موسوعة الإمارات البرية»**, volume 2, collected and researched by **جمعة خليفة بن ثالث الحميري** (2014). A small selection of lexical facts is independently summarized with printed/PDF locators in `references/heritage-lexicon.json`; example sentences are original provisional exercises, not book or owner quotations. The book, page images, bulk extraction and private reading records are not included. Copyright remains with the rights holder; this project's MIT license does not license the book. No endorsement, contemporary-usage validation or independent scientific verification is claimed. This notice does not authorize bulk expansion or republication of the source.
+
 This project references **«المتوصّف — أمثال وحكم من الإمارات»**, collected and researched by **عبدالله حمدان عبدالله أحمد بن دلموك**, published by **مركز حمدان بن محمد لإحياء التراث**.
 
 The book is not included. Its copyright, page images, and other third-party material are not covered by this project's MIT license. No ownership of the book or endorsement by its author or publisher is claimed.

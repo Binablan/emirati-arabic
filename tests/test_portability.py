@@ -15,7 +15,10 @@ RUNTIME_FILES = (
     'references/conversation-behavior.md', 'references/owner-examples.md',
     'references/examples.md', 'references/sources.md',
     'references/abu-dhabi-sources.md', 'references/abu-dhabi-lexicon.json',
-    'references/abu-dhabi-examples.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
+    'references/abu-dhabi-examples.md',
+    'references/heritage-context.md', 'references/heritage-lexicon.json',
+    'references/contextual-usage.md',
+    'LICENSE', 'THIRD_PARTY_NOTICES.md',
 )
 
 
@@ -94,7 +97,7 @@ class PortabilityTests(unittest.TestCase):
             first = subprocess.run(command, capture_output=True, env=env)
             self.assertEqual(first.returncode, 0, first.stderr.decode('utf-8'))
             report = json.loads(first.stdout.decode('utf-8'))
-            self.assertEqual(report['source_version'], '0.2.1-rc.1')
+            self.assertEqual(report['source_version'], '1.0.0')
             self.assertEqual(report['output'], 'emirati-arabic-chat.md')
             data = (output / report['output']).read_bytes()
             text = data.decode('utf-8')
@@ -107,7 +110,8 @@ class PortabilityTests(unittest.TestCase):
             self.assertEqual(manifest['output_sha256'], hashlib.sha256(data).hexdigest())
             self.assertIn('تعليمات التفعيل', text)
             self.assertIn('لا يلزم تشغيل أدوات أو سكربتات', text)
-            self.assertIn('not a cross-model compatibility certification', text)
+            self.assertIn('a local build does not prove', text)
+            self.assertIn('remote publication, installation, runtime activation, or cross-model compatibility', text)
             self.assertNotIn('accepted_probes', text)
             self.assertNotIn('class BehaviorContractTests', text)
             self.assertNotIn('حالات الاختبار المحجوبة: نتائج', text)

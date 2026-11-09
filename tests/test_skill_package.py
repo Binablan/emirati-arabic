@@ -32,6 +32,8 @@ class SkillPackageTests(unittest.TestCase):
                                 'references/abu-dhabi.md', 'references/abu-dhabi-sources.md',
                                 'references/abu-dhabi-examples.md', 'references/evaluation.md',
                                 'references/owner-examples.md',
+                                'references/heritage-context.md',
+                                'references/contextual-usage.md',
                                 'references/conversation-behavior.md',
                                 'references/conversation-evaluation.md'})
         for ref in refs:

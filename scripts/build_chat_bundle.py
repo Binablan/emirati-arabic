@@ -17,13 +17,17 @@ RUNTIME_FILES = (
     'references/conversation-behavior.md', 'references/owner-examples.md',
     'references/examples.md', 'references/sources.md',
     'references/abu-dhabi-sources.md', 'references/abu-dhabi-lexicon.json',
-    'references/abu-dhabi-examples.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
+    'references/abu-dhabi-examples.md',
+    'references/heritage-context.md', 'references/heritage-lexicon.json',
+    'references/contextual-usage.md',
+    'LICENSE', 'THIRD_PARTY_NOTICES.md',
 )
 HEADER = """# Emirati Arabic — single-file chat edition
 
 By Binablan, Hermes Agent. Generated from the existing emirati-arabic skill.
-This is a working-tree build, not a new release or proof of runtime activation,
-and not a cross-model compatibility certification. See chat-manifest.json for
+This edition is generated from versioned source; a local build does not prove
+remote publication, installation, runtime activation, or cross-model compatibility.
+See chat-manifest.json for
 source-byte hashes and the output checksum. Do not edit this generated copy;
 change the original source and rebuild it.
 

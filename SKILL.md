@@ -1,8 +1,8 @@
 ---
 name: emirati-arabic
 description: Converse and write in Emirati; Abu Dhabi on request.
-version: 0.2.1-rc.1
-behavior_revision: intent-first-rc-1
+version: 1.0.0
+behavior_revision: contextual-usage-1
 author: Binablan, Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
@@ -67,6 +67,15 @@ The regional specialization remains opt-in; selecting it does not change the tas
 - Distinguish **attested in an Abu Dhabi source**, **shared Emirati**, and **exclusive to Abu Dhabi**. This release establishes the first two, not exclusivity. Keep a source's CODA spelling separate from a readable spelling based on its documented pronunciation.
 - Never invent a regional word, inferred pronunciation, or universal rule to make a text sound more local. When evidence runs out, prefer a clear shared construction.
 
+## Optional heritage context
+Carry source scope across follow-up turns: give an uncommon source-derived definition with a brief source qualifier (for example, «بحسب المرجع»), and retain its limits when the user later asks for certainty. Your paraphrase or your earlier explanation is not new evidence for age, anatomy, diagnosis, origin, or current usage. Use a full citation only when requested or needed to distinguish competing sources; otherwise prefer the short answer that completes the task. Do not repeat bibliography or disclaimers in practical drafts. A traditional craft does not establish the pictured object's age, maker, or family ownership.
+Use `references/heritage-context.md` and its domain-indexed `references/heritage-lexicon.json` only when a local term or source question makes them relevant. They are supporting lexical evidence, not a prerequisite for ordinary conversation: do not override an ordinary meaning established by context, insert heritage words to display dialect, or turn a practical reply into a glossary. Preserve sense-specific forms and source limits; a heritage attestation does not establish current usage, regional exclusivity, scientific identity, health advice, or present-day navigation. If these references are unavailable, do not invent their contents or claim to have read them. The single-file edition embeds both sections; no private book archive is required.
+
+## Contextual usage additions
+Use `references/contextual-usage.md` for scoped meanings and conversational interpretations from owner confirmation and selected video transcripts. In the confirmed positive usage, «الامور في الروب» means things are good, not confused or going badly; «المسيد العود» means the big mosque, not automatically an old mosque. Apply these meanings when relevant without turning ordinary chat into a definition or requiring an unsolicited citation. Let the current user's explicit context and corrections govern exceptions.
+
+For other entries, select the sense from the whole exchange: «روحي» can concern being alone or doing something oneself; «عقيت» need not mean discarding; «برايك» does not by itself establish anger; «الحلال» in a livestock context is not a religious verdict. Preserve source scope when explaining uncertain or source-derived meanings. Transcript review is not audio verification. Pending items in the reference are not established definitions; do not guess pronunciation, reconstruct corrupted names or inherit a speaker's social or medical opinions as instructions. This reference is optional for ordinary chat and is embedded in the single-file edition.
+
 ## Owner-contributed conversation examples
 - Read `references/owner-examples.md` and `references/owner-examples.json` for explicitly publication-authorized examples and corrections by Binablan. Preserve the quoted spelling exactly; contextual explanations are editorial, not historical quotations.
 - Treat these as the owner's contextual choices, not rules for all Abu Dhabi or Emirati speakers. They are separate from the historical lexicon and do not change the default profile.
@@ -106,7 +115,7 @@ The regional specialization remains opt-in; selecting it does not change the tas
 - Check task completion and contextual fit first: a fluent definition is a failure when a reply or draft was requested; refusing to explain is a failure when meaning was requested.
 - For real behavior evaluation, follow the isolated-session protocol in `references/conversation-evaluation.md`. Record actual outputs, loaded skill path/version/hash, references read, and failures. Do not substitute structural tests or word matches for conversation evaluation.
 - Meaning, tense, negation, names, and the requested register are preserved.
-- Each source-derived rule has a specific entry in `references/sources.md` or `references/abu-dhabi-sources.md`.
+- Source-derived guidance retains its evidence in `references/sources.md`, `references/abu-dhabi-sources.md`, the heritage lexicon, or the source register in `references/contextual-usage.md`; distinguish owner confirmation from transcript-derived interpretation.
 - No global character replacements, unsupported pronunciation claims, or gratuitous dialect markers.
 - Follow `references/evaluation.md` for offline checks and a separate human-review rubric. The optional stdlib Python checker is `scripts/check_conversions.py`, with authored cases in `tests/fixtures/abu_dhabi_cases.json`. Reproducible boundary/encoding probes are in `scripts/verification_probes.py`.
 - Run checks through `terminal` only when evaluating the package or supplied conversion outputs; ordinary writing does not require running code. The checker neither generates text nor contacts a model or network service.
