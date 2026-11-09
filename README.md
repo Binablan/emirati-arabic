@@ -1,6 +1,6 @@
 # Emirati Arabic Skill | مهارة اللهجة الإماراتية
 
-**By Binablan · v0.2.1-rc.1 · Experimental release candidate · MIT (original project material)**
+**By Binablan · v1.0.0 · Stable · MIT (original project material)**
 
 مهارة للمحادثة وفهم المقصود وكتابة النصوص ومراجعتها بالإماراتية، مع تخصص أبوظبي عند اختياره. تنجز الطلب بدل شرح تعبيرات المستخدم تلقائيًا؛ المعجم مرجع مساعد فقط. قواعدها محدودة وأمثلتها قابلة للمراجعة، وليست بديلًا عن مراجعة متحدثي اللهجة.
 
@@ -10,13 +10,15 @@ A small, source-grounded skill for conversation, contextual intent, writing, and
 
 [دليل التفعيل حسب التطبيق](USAGE.md): مهارة `SKILL.md` للتطبيقات الداعمة، أو ملف محادثة مجمّع للإرفاق أو اللصق. لا تحتاج المحادثة أدوات Hermes أو ذاكرة خاصة؛ يحتاج التطبيق إلى إيصال التعليمات فعلًا للنموذج. الإماراتية العامة بعد التفعيل، وأبوظبي عند الطلب. قابلية نقل التعليمات ليست ضمانًا لتوافق كل نموذج أو تطبيق.
 
-ملف المحادثة يُولَّد من المصدر نفسه عبر `scripts/build_chat_bundle.py`؛ ليس مهارة بديلة أو نصًا مستقلاً نطوّره بالتوازي. طريقة توليده وحدود الحجم والتحقق موضحة في الدليل. لا تتضمن هذه الإضافة نتيجة اختبار محادثة عابر للنماذج.
+ملف المحادثة يُولَّد من المصدر نفسه عبر `scripts/build_chat_bundle.py`؛ ليس مهارة بديلة أو نصًا مستقلاً نطوّره بالتوازي. طريقة توليده وحدود الحجم والتحقق موضحة في الدليل. تُفصل تجارب الحوار الفعلية عن فحوص التغليف، ولا يعني نجاح عينة توافق كل التطبيقات.
 
-## Experimental candidate | مرشح الإصدار التجريبي
+## Stable 1.0.0 | النسخة المستقرة
 
-`0.2.1-rc.1` is a new prerelease version, separate from `0.2.0` on `main`. It carries the prior conversation-first behavior and all source/owner examples forward, with an additional clarity rule for actors, actions, and potentially ambiguous kinship/body-part references in spoken scripts. It does not ban regional spellings or include a private test answer as a template.
+`1.0.0` is the stable source edition: conversation-first instructions, portable activation, the opt-in Abu Dhabi profile, preserved source/owner examples, and a small optional heritage reference. It carries source limits through follow-up turns without turning practical replies into bibliography. It does not ban regional spellings or install private test answers as templates.
 
-This branch is for community review through a Pull Request. No merge, GitHub Release, registry publication, or native-speaker certification is implied. Dialect quality remains provisional and open to human review. See [release notes](RELEASE_NOTES.md) and [distribution policy](DISTRIBUTION.md).
+مستقرة تعني نسخة محددة قابلة للاستخدام والصيانة، لا ضمان دقة 100% أو اكتمال اللهجة. تبقى الإضافات المستقبلية ممكنة بإصدارات مرقمة، وتبقى حدود الدليل ومراجعة المتحدثين معلنة. بناء النسخة محليًا لا يثبت نشرها على GitHub أو تحديث نسخة مثبتة. See [release notes](RELEASE_NOTES.md) and [distribution policy](DISTRIBUTION.md).
+
+[السياق التراثي وحدوده](references/heritage-context.md) · [المعاني والإحالات](references/heritage-lexicon.json). المصدر التراثي يدعم الفهم ولا يفرض الكلمات على السوالف؛ الكتاب وصوره غير مضمّنين.
 
 ## Historical behavior review — intent-first-review-2
 
@@ -31,7 +33,7 @@ Historical r2 checks: 49 offline tests. The new ordinary-discovery comparison co
 - [Behavior examples and boundaries](references/conversation-behavior.md)
 - [Isolated loading and real conversation evaluation](references/conversation-evaluation.md)
 
-The `main` URL below remains the previously published version, **not this candidate**. A working-tree edit is not proof that any running assistant loaded it. Use a separate test profile and verify the exact branch-copy hashes and actual `skill_view` results; do not replace another installed skill or change global settings implicitly.
+Historical review context: working-tree edits are not proof that a running assistant loaded them. Verify the exact installed version and actual reference contents; do not replace another installed skill or change global settings implicitly.
 
 Local verification for the previous review: 43 offline tests passed (the prior baseline was 40). A real, limited A/B run collected 34 replies: 14 cases / 17 user turns per condition, including a four-turn resumed conversation. Both conditions used `gpt-6-astra` via `openai-codex`, requested medium reasoning, and disabled persistent memory; temperature and seed were not explicitly set. The comparison condition had no Emirati skill; the treatment's persisted launch policy contained the exact modified `SKILL.md` text on every evaluated turn. An additional activation session returned that file and two references via real `skill_view` calls. Full inputs, raw replies, loading evidence, and judgments are kept in the separate local review bundle, not installed as teaching examples. This is not an independent native-speaker assessment or a statistical claim of improvement.
 
@@ -46,7 +48,7 @@ Local verification for the previous review: 43 offline tests passed (the prior b
 
 الموثّق في مصدر عن أبوظبي ليس بالضرورة حصرياً لها. شواهد Qafisheh تاريخية، وشواهد Habash et al. موسومة بأبوظبي في دراسة كتابة ونطق؛ لا يثبت أي منهما وحده طبيعية محادثة معاصرة عند كل المتحدثين. الأمثلة تطبيقات أصلية غير معتمدة محلياً.
 
-**Historical v0.2.0 GitHub source update, not a registry publication or GitHub Release.** The `main` installation URL below installs that branch, not this candidate. The version number does not imply independent native-speaker certification.
+**Historical v0.2.0 GitHub source update, not a registry publication or GitHub Release.** This historical record is not the current package version or a claim of independent native-speaker certification.
 
 ### أمثلة صاحب المهارة المأذون بنشرها
 
@@ -59,15 +61,15 @@ Local verification for the previous review: 43 offline tests passed (the prior b
 Prerequisite: an installed Hermes version supporting direct `SKILL.md` URL installation. Review the source before installing. Test in a **new isolated profile** so an existing personal skill is not overwritten:
 
 ```sh
-hermes profile create emirati-community-review --no-skills --no-alias
-hermes -p emirati-community-review skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/work/v0.2.0-abu-dhabi/SKILL.md
-hermes -p emirati-community-review skills list
-hermes -p emirati-community-review
+hermes profile create emirati-isolated --no-skills --no-alias
+hermes -p emirati-isolated skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/main/SKILL.md
+hermes -p emirati-isolated skills list
+hermes -p emirati-isolated
 ```
 
-The branch name predates the candidate version. Check the installed `SKILL.md` says `version: 0.2.1-rc.1` and `behavior_revision: intent-first-rc-1`. This is a mutable review-branch URL, not a final-release tag. For a fixed snapshot, replace the branch segment with the full commit SHA shown on the PR. Installation is subject to Hermes' normal safety scan; do not bypass a blocked verdict with `--force`. Choose another fresh profile name if this one exists.
+The URL follows the currently published `main`, not an unpublished local build. Check the installed `SKILL.md`: this edition says `version: 1.0.0` and `behavior_revision: contextual-usage-1`. If the remote copy is older, it is not this edition; use the supplied local chat artifact or wait for authorized publication. For a fixed published snapshot, replace `main` with its verified full commit SHA; no version tag is assumed to exist. Installation is subject to Hermes' normal safety scan; do not bypass a blocked verdict with `--force`. Choose another fresh profile name if this one exists.
 
-To deliberately install the older `main` source instead (not the candidate):
+The direct source URL below also follows mutable `main`; it does not create or prove publication of 1.0.0:
 
 ```sh
 hermes skills install https://raw.githubusercontent.com/Binablan/emirati-arabic/main/SKILL.md

@@ -143,8 +143,8 @@ class BehaviorContractTests(unittest.TestCase):
     def test_intent_first_contract_is_in_loaded_skill(self):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         self.assertIn('description: Converse and write in Emirati; Abu Dhabi on request.', text)
-        for metadata in ('version: 0.2.1-rc.1',
-                         'behavior_revision: intent-first-rc-1'):
+        for metadata in ('version: 1.0.0',
+                         'behavior_revision: contextual-usage-1'):
             with self.subTest(metadata=metadata):
                 self.assertIn(metadata, text.splitlines())
         self.assertIn('## Conversation and writing contract', text)

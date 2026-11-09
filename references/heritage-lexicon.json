@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "curated-source-reference",
+  "entry_count": 8,
+  "scope": "Selected lexical facts, independently summarized; not a transcription, complete dictionary, botanical authority, or validation of current speech.",
+  "sources": [{"id": "terrestrial-2014-v2", "title": "موسوعة الإمارات البرية", "volume": 2, "year": 2014, "collector_researcher": "جمعة خليفة بن ثالث الحميري", "locator_note": "PDF page means the one-based position in the consulted 446-page file. Printed pagination is recorded separately; no fixed offset is assumed.", "rights": "Copyright remains with the book's rights holder. The book, images and bulk extraction are not included or licensed by this project."}],
+  "entries": [
+    {
+      "id": "majahim", "source_form": "الإبل المجاهيم", "lookup_forms": ["الإبل المجاهيم", "المجاهيم"], "domain": "camels",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 20, "printed_page": 20},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["الإبل المجاهيم", "المجاهيم"], "summary": "اسم للإبل ذات اللون الأسود بحسب هذا المدخل."}],
+      "context_cues": ["ذكر الإبل ووصف لونها"],
+      "limits": ["لا يثبت التعريف صفات السلالة أو الإنتاج أو الطبع."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "شو يقصدون بالمجاهيم يوم يتكلمون عن الإبل؟"}
+    },
+    {
+      "id": "harara", "source_form": "الحرارة", "lookup_forms": ["الحرارة"], "domain": "plants",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 32, "printed_page": 32},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["الحرارة"], "summary": "اسم نبات جبلي يورده المصدر في سياق نباتات الشتاء، وينسب تداول الاسم إلى الفجيرة ومحيطها."}],
+      "context_cues": ["حديث صريح عن النباتات أو أسماء نباتات الجبال"],
+      "limits": ["لا يزاحم معنى درجة الحرارة في الكلام عن الجو أو الحمى أو الأجهزة.", "النسبة الجغرافية وصف المصدر، لا إثبات للاختصاص أو الشيوع الحالي؛ الأسماء البديلة غير المحددة مستبعدة.", "لا يثبت الاسم نوعًا علميًا أو صلاحية للأكل أو العلاج."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "هنيه الحرارة اسم نبات، مب كلام عن الجو."}
+    },
+    {
+      "id": "umm-white-face", "source_form": "أم ويه أبيض", "lookup_forms": ["أم ويه أبيض"], "domain": "places",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 38, "printed_page": 38},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["أم ويه أبيض"], "summary": "اسم موضع صحراوي يضعه المرجع شمال وادي الصفا."}],
+      "context_cues": ["قائمة أسماء مواضع أو حديث محدد عن هذا المكان"],
+      "limits": ["ليس وصف شخص في هذا المدخل؛ لا يعمم هذا المعنى على كل استعمال مشابه.", "لا يستنتج موقع دقيق أو مسار وصول أو وضع المكان الحالي من الوصف القديم."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "لقيت أم ويه أبيض ضمن أسماء الأماكن، تعرف عنها شي؟"}
+    },
+    {
+      "id": "awwal-fitr", "source_form": "أول فطر", "lookup_forms": ["أول فطر"], "domain": "camels",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 38, "printed_page": 38},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["أول فطر"], "summary": "وصف للبعير عند ظهور سنه الأول وفق المدخل."}],
+      "context_cues": ["بعير أو إبل أو مرحلة أسنان"],
+      "limits": ["لا يورد المدخل عمرًا بالسنوات؛ لا تضف عمرًا عدديًا من عندك.", "لا يحول إلى معنى الإفطار أو الفطر النباتي في سياق الإبل."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "قال عن البعير أول فطر، يقصد مرحلة من نموه؟"}
+    },
+    {
+      "id": "amkorna", "source_form": "أمْكورنه", "lookup_forms": ["أمْكورنه", "أمكورنه"], "domain": "palms",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 41, "printed_page": 41},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["أمْكورنه", "أمكورنه"], "summary": "اسم للنخلة المتوقف نموها في هذا المرجع."}],
+      "context_cues": ["نخلة لا تنمو أو وصف نمو النخيل"],
+      "limits": ["المرض احتمال ذكره المصدر، لا تشخيص مؤكد ولا تسمية مرض بعينه.", "سكون الميم ظاهر في العنوان؛ الصيغة غير المشكلة للتعرف فقط، ولا تستكمل بقية الحركات بالتخمين.", "لا تنسب الاسم إلى منطقة على سبيل الحصر."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "يسمون هالنخلة أمكورنه؛ شو المقصود بالاسم؟"}
+    },
+    {
+      "id": "razm", "source_form": "رزم", "lookup_forms": ["رزم"], "domain": "terrain",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 182, "printed_page": 184},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["رزم"], "summary": "مسمى لتل مرتفع من الرمل في سياق التضاريس."}],
+      "context_cues": ["وصف أرض رملية أو تل في البر"],
+      "limits": ["لا يستنتج ارتفاع بالأمتار أو اشتقاق اسم مكان.", "لا يستبدل معنى حزم الأشياء أو رزم الورق بهذا المعنى التراثي."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "في وصف الأرض مكتوب رزم، مب في قائمة أغراض."}
+    },
+    {
+      "id": "ramth", "source_form": "رَمْثْ", "lookup_forms": ["رَمْثْ", "رمث", "الرمث", "الرمثة"], "domain": "plants",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 187, "printed_page": 189},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [{"forms": ["رَمْثْ", "رمث", "الرمث", "الرمثة"], "summary": "مسمى نبات بري صحراوي؛ يورد المدخل أيضًا صيغة الرمثة."}],
+      "context_cues": ["نباتات البر أو مسمياتها"],
+      "limits": ["الضبط بفتح الراء وسكون الميم والثاء من هذا المصدر؛ ليس قاعدة لجميع المتحدثين.", "الاسم والوصف لا يكفيان لتحديد عينة نباتية أو النوع العلمي أو سلامة استعمالها للأكل والعلاج.", "لم تنقل أوصاف الانتشار والارتفاع بوصفها حقائق علمية متحققة مستقلًا."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "أبا أعرف معنى الرمث في أسماء نباتات البر."}
+    },
+    {
+      "id": "yamda", "source_form": "يمده - ايمده", "lookup_forms": ["يمده", "ايمده"], "domain": "crafts-and-weather-language",
+      "source_id": "terrestrial-2014-v2", "locator": {"pdf_page": 434, "printed_page": 436},
+      "evidence_status": "source-attested-not-contemporary-validated",
+      "definition_policy": "عند شرح هذا المعنى، انسب التعريف إلى المرجع بتقييد موجز، وأبق هذا النطاق في المتابعة؛ لا تجعل كلامك السابق إثباتًا مستقلًا. هذه قاعدة تحريرية لا اقتباس من المصدر. لا تضف التقييد إلى المسودات العملية التي لا تطلب شرح المعنى.",
+      "senses": [
+        {"forms": ["يمده", "ايمده"], "summary": "بساط صغير من ليف النخيل؛ يذكر المصدر استعماله للفرش وعلى ظهر البعير."},
+        {"forms": ["يمده"], "summary": "يذكر المصدر يمده أيضًا للدلالة على شدة البرد."}
+      ],
+      "context_cues": ["الفرش أو ليف النخيل للمعنى المادي", "البرد للمعنى الآخر"],
+      "limits": ["لا تنقل معنى البرد آليًا إلى ايمده؛ النص يسمي يمده في هذه الدلالة.", "لا تفترض اشتقاقًا بين المعنيين، ولا تجعلهما حصرًا لكل الاستعمالات.", "إذا احتاج الجواب تحديد أحد المعنيين ولم يحسم السياق، اسأل سؤالًا قصيرًا."],
+      "example": {"status": "original-provisional-not-owner-quotation", "text": "يمده في هالوصف يقصدون بها البساط ولا البرد؟"}
+    }
+  ]
+}

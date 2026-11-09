@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.0 — Stable source edition
+
+- Local pre-publication update `contextual-usage-1`: add the confirmed positive meaning of «الامور في الروب», the full meaning of «المسيد العود», and a contextual usage reference drawn from three video texts. Keep owner-confirmed meanings, transcript-derived readings and unresolved candidates distinct; audio and exact word timestamps were not verified.
+- Preserve the previous local 1.0.0 artifacts and evaluation evidence separately. This updated text needs its own checks; no previous success percentage transfers to it. No remote publication or installed-profile update is implied.
+- Promote the maintained skill to a stable, extensible version without promising 100% accuracy or native-speaker certification. Publication and installation remain separate actions.
+- Carry uncommon source-derived definitions and their limits through follow-up turns; earlier assistant wording is not independent evidence. Prefer brief source attribution over unnecessary bibliography in ordinary explanations.
+- Guard pictured-object provenance while retaining natural short captions. Preserve all existing general/Abu Dhabi rules and authorized owner quotations.
+- Consolidate portable activation and the small curated heritage reference. Retain the historical review records below at their original scope; prior model scores are not new measurements of this version.
+
+## Historical preparation — limited heritage-context pilot
+
+- Add eight selectively summarized lexical entries from the 2014 terrestrial encyclopedia, volume 2, with separate printed/PDF locators, source-scoped meanings, original provisional examples and explicit evidence/rights limits. No source images, bulk extraction or private review files are included.
+- Keep heritage lookup optional and subordinate to the user's context and task; protect ordinary meanings, sense-specific forms, uncertainty and scientific/health/navigation boundaries.
+- Include the compact reference and usage guide in both folder and single-file builds, with offline metadata and packaging checks. This is a local working-tree pilot, not publication, installed-profile synchronization, contemporary-usage validation or a compatibility certification.
+
 ## Unreleased — activation and portability preparation
 
 - Add an explicit host-independent activation contract to the existing skill: Emirati conversation after user activation, opt-in Abu Dhabi, requested language/quotation preservation, no dependency on private memory or a tool API, and no fabricated reference access or automatic correction storage.
